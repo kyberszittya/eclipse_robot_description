@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<environmentmodel:World
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:environmentmodel="http://inf.mit.bme.hu/environmentmodel"
+    xsi:schemaLocation="http://inf.mit.bme.hu/environmentmodel ../../../hu.bme.mit.inf.testing.description.simulator.environment.model/model/environmentmodel.ecore"
+    name="testrobotarm">
+  <model xsi:type="environmentmodel:ComplexModel"
+      name="robot_arm">
+    <link name="base_footprint">
+      <visualmesh
+          name="main_viz">
+        <mesh
+            xsi:type="environmentmodel:Cube"
+            height="0.1"/>
+      </visualmesh>
+      <linkphysicalsettings
+          mass="10.0"/>
+    </link>
+    <link name="link_1">
+      <visualmesh
+          name="link_1_viz">
+        <mesh
+            xsi:type="environmentmodel:Cylinder"
+            radius="0.1">
+          <pose>
+            <position
+                z="0.5"/>
+            <orientation/>
+          </pose>
+        </mesh>
+      </visualmesh>
+      <pose>
+        <position
+            z="0.1"/>
+        <orientation/>
+      </pose>
+      <linkphysicalsettings
+          mass="12.0"/>
+    </link>
+    <joint name="joint_1"
+        parent="//@model.0/@link.0"
+        child="//@model.0/@link.1">
+      <axis>
+        <axis
+            x="1.0"/>
+        <jointlimit
+            lower="-0.57"
+            upper="0.57"
+            velocity="0.1"
+            effort="100.0"/>
+      </axis>
+      <pose>
+        <position
+            z="0.1"/>
+        <orientation/>
+      </pose>
+    </joint>
+  </model>
+</environmentmodel:World>

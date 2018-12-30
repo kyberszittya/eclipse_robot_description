@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<sdf version="1.5">
+  <world name="testrobotarm_undefinedaxis">
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+    <include>
+      <uri>model://sun</uri>
+    </include>
+    <model name="robot_arm">
+      <link name="base_footprint">
+        <pose>0 0 0 0 0 0</pose>
+        <visual name="main_viz">
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>1.0 1.0 0.1</size>
+            </box>
+          </geometry>
+        </visual>
+        <collision name="coll_main_viz">
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>1.0 1.0 0.1</size>
+            </box>
+          </geometry>
+        </collision>
+        <inertial>
+          <inertia>
+            <ixx>8.416666666666664</ixx>
+            <ixy>0.0</ixy>
+            <ixz>0.0</ixz>
+            <iyy>8.416666666666664</iyy>
+            <iyz>0.0</iyz>
+            <izz>16.666666666666664</izz>
+          </inertia>
+          <mass>10.0</mass>
+        </inertial>
+      </link>
+      <link name="link_1">
+        <pose>0 0 0 0 0 0</pose>
+        <visual name="link_1_viz">
+          <pose>0.0 0.0 0.5 0.0 0.0 0.0</pose>
+          <geometry>
+            <cylinder>
+              <length>1.0</length>
+              <radius>0.1</radius>
+            </cylinder>
+          </geometry>
+        </visual>
+        <collision name="coll_link_1_viz">
+          <pose>0.0 0.0 0.5 0.0 0.0 0.0</pose>
+          <geometry>
+            <cylinder>
+              <length>1.0</length>
+              <radius>0.1</radius>
+            </cylinder>
+          </geometry>
+        </collision>
+        <inertial>
+          <inertia>
+            <ixx>32.78591827693044</ixx>
+            <ixy>0.0</ixy>
+            <ixz>0.0</ixz>
+            <iyy>32.78591827693044</iyy>
+            <iyz>0.0</iyz>
+            <izz>1.9098593171027443</izz>
+          </inertia>
+          <mass>12.0</mass>
+        </inertial>
+      </link>
+      <joint name="joint_1" type="revolute">
+        <parent>base_footprint</parent>
+        <child>link_1</child>
+        <axis>
+          <limit>
+            <lower>-0.57</lower>
+            <upper>0.57</upper>
+            <velocity>0.1</velocity>
+            <effort>100.0</effort>
+          </limit>
+          <xyz>0 0 1</xyz>
+        </axis>
+        <pose>0.0 0.0 1.0 0.0 0.0 0.0</pose>
+      </joint>
+      <pose>0 0 0 0 0 0</pose>
+      <static>false</static>
+    </model>
+  </world>
+</sdf>

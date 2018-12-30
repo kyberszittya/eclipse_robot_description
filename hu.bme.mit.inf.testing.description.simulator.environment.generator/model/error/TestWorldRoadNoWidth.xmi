@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<environmentmodel:World
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:environmentmodel="http://inf.mit.bme.hu/environmentmodel"
+    xsi:schemaLocation="http://inf.mit.bme.hu/environmentmodel ../../hu.bme.mit.inf.testing.description.simulator.environment.model/model/environmentmodel.ecore"
+    name="road_world">
+  <road name="road_1"
+      material="asphalt">
+    <controlvertices
+        x="1.0"/>
+    <controlvertices
+        x="10.0"
+        y="10.0"/>
+    <controlvertices
+        x="20.0"/>
+  </road>
+  <model xsi:type="environmentmodel:ComplexModel"
+      name="sphere_1">
+    <physicalsettings/>
+    <link name="base_link">
+      <visualmesh
+          name="main_viz">
+        <mesh
+            xsi:type="environmentmodel:Sphere"/>
+      </visualmesh>
+      <linkphysicalsettings
+          mass="1.0"/>
+    </link>
+  </model>
+  <model xsi:type="environmentmodel:ComplexModel"
+      name="sphere_2">
+    <pose>
+      <position
+          x="5.0"/>
+      <orientation/>
+    </pose>
+    <link name="base_link">
+      <visualmesh
+          name="main_viz">
+        <mesh
+            xsi:type="environmentmodel:Sphere"/>
+      </visualmesh>
+      <linkphysicalsettings
+          mass="1.0"/>
+    </link>
+  </model>
+</environmentmodel:World>

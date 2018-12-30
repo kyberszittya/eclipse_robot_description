@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/hu.bme.mit.inf.testing.description.simulator.environment.model/src-gen"
+    creationIcons="false" editDirectory="/hu.bme.mit.inf.testing.description.simulator.environment.model.edit/src-gen"
+    editorDirectory="/hu.bme.mit.inf.testing.description.simulator.environment.model.editor/src-gen"
+    modelPluginID="hu.bme.mit.inf.testing.description.simulator.environment.model"
+    modelName="Environmentmodel" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    codeFormatting="true" testsDirectory="/hu.bme.mit.inf.testing.description.simulator.environment.model.test/src-gen"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>environmentmodel.ecore</foreignModel>
+  <genPackages prefix="Environmentmodel" basePackage="hu.bme.mit.inf.testing.description.simulator.environment.model"
+      disposableProviderFactory="true" ecorePackage="environmentmodel.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="environmentmodel.ecore#//JOINT_TYPE">
+      <genEnumLiterals ecoreEnumLiteral="environmentmodel.ecore#//JOINT_TYPE/PRISMATIC"/>
+      <genEnumLiterals ecoreEnumLiteral="environmentmodel.ecore#//JOINT_TYPE/REVOLUTE"/>
+    </genEnums>
+    <genClasses ecoreClass="environmentmodel.ecore#//World">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference environmentmodel.ecore#//World/road"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference environmentmodel.ecore#//World/model"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environmentmodel.ecore#//World/name"/>
+    </genClasses>
+    <genClasses ecoreClass="environmentmodel.ecore#//Road">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference environmentmodel.ecore#//Road/controlvertices"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environmentmodel.ecore#//Road/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environmentmodel.ecore#//Road/width"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environmentmodel.ecore#//Road/material"/>
+    </genClasses>
+    <genClasses ecoreClass="environmentmodel.ecore#//Model">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference environmentmodel.ecore#//Model/pose"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environmentmodel.ecore#//Model/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference environmentmodel.ecore#//Model/physicalsettings"/>
+    </genClasses>
+    <genClasses ecoreClass="environmentmodel.ecore#//Pose">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference environmentmodel.ecore#//Pose/position"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference environmentmodel.ecore#//Pose/orientation"/>
+    </genClasses>
+    <genClasses ecoreClass="environmentmodel.ecore#//Position">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environmentmodel.ecore#//Position/x"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environmentmodel.ecore#//Position/y"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environmentmodel.ecore#//Position/z"/>
+    </genClasses>
+    <genClasses ecoreClass="environmentmodel.ecore#//Orientation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environmentmodel.ecore#//Orientation/roll"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environmentmodel.ecore#//Orientation/pitch"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environmentmodel.ecore#//Orientation/yaw"/>
+    </genClasses>
+    <genClasses ecoreClass="environmentmodel.ecore#//Primitive"/>
+    <genClasses ecoreClass="environmentmodel.ecore#//ExteriorModel">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environmentmodel.ecore#//ExteriorModel/filename"/>
+    </genClasses>
+    <genClasses ecoreClass="environmentmodel.ecore#//Cube">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environmentmodel.ecore#//Cube/width"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environmentmodel.ecore#//Cube/depth"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environmentmodel.ecore#//Cube/height"/>
+    </genClasses>
+    <genClasses ecoreClass="environmentmodel.ecore#//Sphere">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environmentmodel.ecore#//Sphere/radius"/>
+    </genClasses>
+    <genClasses ecoreClass="environmentmodel.ecore#//PhysicalSettings">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environmentmodel.ecore#//PhysicalSettings/static"/>
+    </genClasses>
+    <genClasses ecoreClass="environmentmodel.ecore#//ComplexModel">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference environmentmodel.ecore#//ComplexModel/link"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference environmentmodel.ecore#//ComplexModel/joint"/>
+    </genClasses>
+    <genClasses ecoreClass="environmentmodel.ecore#//Link">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environmentmodel.ecore#//Link/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference environmentmodel.ecore#//Link/visualmesh"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference environmentmodel.ecore#//Link/collisionmesh"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference environmentmodel.ecore#//Link/pose"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference environmentmodel.ecore#//Link/linkphysicalsettings"/>
+    </genClasses>
+    <genClasses ecoreClass="environmentmodel.ecore#//VisualMesh">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference environmentmodel.ecore#//VisualMesh/mesh"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environmentmodel.ecore#//VisualMesh/name"/>
+    </genClasses>
+    <genClasses ecoreClass="environmentmodel.ecore#//Mesh">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference environmentmodel.ecore#//Mesh/pose"/>
+    </genClasses>
+    <genClasses ecoreClass="environmentmodel.ecore#//ModelMesh">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environmentmodel.ecore#//ModelMesh/path"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference environmentmodel.ecore#//ModelMesh/scale"/>
+    </genClasses>
+    <genClasses ecoreClass="environmentmodel.ecore#//CollisionMesh">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference environmentmodel.ecore#//CollisionMesh/mesh"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environmentmodel.ecore#//CollisionMesh/name"/>
+    </genClasses>
+    <genClasses ecoreClass="environmentmodel.ecore#//LinkPhysicalSettings">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environmentmodel.ecore#//LinkPhysicalSettings/hollow"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environmentmodel.ecore#//LinkPhysicalSettings/mass"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference environmentmodel.ecore#//LinkPhysicalSettings/inertial"/>
+    </genClasses>
+    <genClasses ecoreClass="environmentmodel.ecore#//Inertial">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environmentmodel.ecore#//Inertial/ixx"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environmentmodel.ecore#//Inertial/iyy"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environmentmodel.ecore#//Inertial/izz"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environmentmodel.ecore#//Inertial/ixy"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environmentmodel.ecore#//Inertial/ixz"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environmentmodel.ecore#//Inertial/iyz"/>
+    </genClasses>
+    <genClasses ecoreClass="environmentmodel.ecore#//Scale">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environmentmodel.ecore#//Scale/sx"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environmentmodel.ecore#//Scale/sy"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environmentmodel.ecore#//Scale/sz"/>
+    </genClasses>
+    <genClasses ecoreClass="environmentmodel.ecore#//Cylinder">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environmentmodel.ecore#//Cylinder/radius"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environmentmodel.ecore#//Cylinder/height"/>
+    </genClasses>
+    <genClasses ecoreClass="environmentmodel.ecore#//PolyLine">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference environmentmodel.ecore#//PolyLine/points"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environmentmodel.ecore#//PolyLine/height"/>
+    </genClasses>
+    <genClasses ecoreClass="environmentmodel.ecore#//Point2D">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environmentmodel.ecore#//Point2D/x"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environmentmodel.ecore#//Point2D/y"/>
+    </genClasses>
+    <genClasses ecoreClass="environmentmodel.ecore#//Joint">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environmentmodel.ecore#//Joint/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference environmentmodel.ecore#//Joint/parent"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference environmentmodel.ecore#//Joint/child"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environmentmodel.ecore#//Joint/type"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference environmentmodel.ecore#//Joint/axis"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference environmentmodel.ecore#//Joint/pose"/>
+    </genClasses>
+    <genClasses ecoreClass="environmentmodel.ecore#//Axis">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference environmentmodel.ecore#//Axis/axis"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference environmentmodel.ecore#//Axis/jointlimit"/>
+    </genClasses>
+    <genClasses ecoreClass="environmentmodel.ecore#//JointLimit">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environmentmodel.ecore#//JointLimit/lower"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environmentmodel.ecore#//JointLimit/upper"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environmentmodel.ecore#//JointLimit/velocity"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute environmentmodel.ecore#//JointLimit/effort"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
