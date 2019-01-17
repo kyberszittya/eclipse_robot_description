@@ -94,6 +94,7 @@ public class GazeboSDFGeneration {
 	public void serializeExteriorModel(String path, Element worldElement, Element includeElement) {
 		final Element uriElement = document.createElement("uri");
 		uriElement.setTextContent(path);
+		
 		includeElement.appendChild(uriElement);
 	}
 	
@@ -602,6 +603,9 @@ public class GazeboSDFGeneration {
 		else {
 			ExteriorModel em = (ExteriorModel)m;
 			model_element = document.createElement("include");
+			final Element nameElement = document.createElement("name");
+			nameElement.setTextContent(em.getName());
+			model_element.appendChild(nameElement);
 			serializeExteriorModel(em.getFilename(), world_element, model_element);			
 			world_element.appendChild(model_element);
 		}
