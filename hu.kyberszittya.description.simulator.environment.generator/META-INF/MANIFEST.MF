@@ -23,7 +23,13 @@ Require-Bundle: javax.inject,
  org.hamcrest.core,
  org.opentest4j,
  org.apiguardian,
- org.eclipse.emf.ecore.xmi
+ org.eclipse.emf.ecore.xmi,
+ hu.kyberszittya.spline.generation;bundle-version="1.0.0",
+ hu.kyberszittya.auto.track.model;bundle-version="0.1.0",
+ com.google.guava,
+ org.eclipse.xtext.xbase.lib,
+ org.eclipse.xtend.lib,
+ org.eclipse.xtend.lib.macro
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Import-Package: javax.annotation;version="1.2.0"
 Automatic-Module-Name: hu.bme.mit.inf.testing.description.simulator.environment.generator

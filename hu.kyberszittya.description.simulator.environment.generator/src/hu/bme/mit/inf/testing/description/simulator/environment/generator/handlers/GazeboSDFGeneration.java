@@ -111,7 +111,7 @@ public class GazeboSDFGeneration {
 		sdf_root.appendChild(world_element);
 		if (default_world) {
 			// Include sun and ground plane
-			serializeExteriorModel("model://ground_plane",world_element);
+			//serializeExteriorModel("model://ground_plane",world_element);
 			serializeExteriorModel("model://sun",world_element);
 		}
 		for (Model m: w.getModel()) {

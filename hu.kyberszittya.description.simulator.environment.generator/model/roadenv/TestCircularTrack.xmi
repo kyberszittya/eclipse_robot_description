@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<track:VehicleEnvironment
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:track="http://kyberszittya.hu/auto/track"
+    xsi:schemaLocation="http://kyberszittya.hu/auto/track ../../../hu.kyberszittya.auto.track.model/model/track.ecore">
+  <environmentobject
+      xsi:type="track:Track"
+      name="seg_track">
+    <segment>
+      <pose>
+        <position/>
+        <orientation/>
+      </pose>
+    </segment>
+    <segment>
+      <pose>
+        <position
+            x="10.0"
+            y="-2.0"/>
+        <orientation/>
+      </pose>
+    </segment>
+    <segment>
+      <pose>
+        <position
+            x="30.0"
+            y="20.0"/>
+        <orientation/>
+      </pose>
+    </segment>
+    <segment>
+      <pose>
+        <position
+            x="10.0"
+            y="15.0"/>
+        <orientation/>
+      </pose>
+    </segment>
+    <segment>
+      <pose>
+        <position
+            x="-15.0"
+            y="3.0"/>
+        <orientation/>
+      </pose>
+    </segment>
+  </environmentobject>
+</track:VehicleEnvironment>
